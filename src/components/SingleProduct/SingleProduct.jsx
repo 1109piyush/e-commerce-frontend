@@ -31,7 +31,6 @@ const SingleProduct = () => {
 
     if (!data) return;
     const product = data?.data?.[0]?.attributes;
-    console.log(product.img)
 
     return (
         <div className="single-product-main-content">

@@ -41,17 +41,18 @@ const Search = ({ setSearchModal }) => {
                         Start typing to see products you are looking for.
                     </div>
                 )}
-                <div className="search-results">
+                <div className="products-container">
+                    <div className="products">
                     {data?.data?.map((item) => (
                         <div
-                            className="search-result-item"
+                            className="product-card"
                             key={item.id}
                             onClick={() => {
                                 navigate("/product/" + item.id);
                                 setSearchModal(false);
                             }}
                         >
-                            <div className="image-container">
+                            <div className="thumbnail">
                                 <img
                                     src={
                                         process.env
@@ -59,18 +60,13 @@ const Search = ({ setSearchModal }) => {
                                         item.attributes.img.data[0].attributes
                                             .url
                                     }
-                                />
-                            </div>
+                                /></div>
                             <div className="prod-details">
-                                <span className="name">
-                                    {item.attributes.title}
-                                </span>
-                                <span className="desc">
-                                    {item.attributes.description}
-                                </span>
+                                <span className="name">{item.attributes.title}</span>
+                                <span className="price">&#8377;{item.attributes.price}</span>
                             </div>
                         </div>
-                    ))}
+                    ))}</div>
                 </div>
             </div>
         </div>
@@ -78,3 +74,5 @@ const Search = ({ setSearchModal }) => {
 };
 
 export default Search;
+
+
