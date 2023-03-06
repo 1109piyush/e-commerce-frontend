@@ -1,70 +1,43 @@
-# Getting Started with Create React App
+# React E-Commerce App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a web-based e-commerce application built using React, Sass, and Strapi CMS. I built this project as part of my learning journey with these technologies. The application allows users to browse products, add them to cart, and purchase them using Stripe payment gateway.
 
-## Available Scripts
+## Getting Started
 
-In the project directory, you can run:
+### Prerequisites
 
-### `npm start`
+- Node.js
+- Strapi CMS
+- Stripe API keys (Test or Live)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Installation
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. Clone the repository and navigate to the project directory.
+2. Install the dependencies using `npm install`.
+3. Set up the environment variables in `.env` file located in the `frontend` directory:
+  - `REACT_APP_STRIPE_DEV_APP_KEY`: Strapi cms API key for development environment.
+  - `REACT_APP_STRIPE_APP_DEV_URL`: URL of the backend server for development environment.
+  - `REACT_APP_STRIPE_PUBLISHABLE_KEY`: Stripe publishable key for payments.
+4. Run the frontend using `npm start` command in the `frontend` directory.
+5. Set up the environment variables in `.env` file located in the `backend` directory:
+  - `HOST`: Server hostname.
+  - `PORT`: Server port number.
+  - `APP_KEYS`: Strapi app keys.
+  - `API_TOKEN_SALT`: Salt for API tokens.
+  - `ADMIN_JWT_SECRET`: Secret for admin JWT token.
+  - `TRANSFER_TOKEN_SALT`: Salt for transfer tokens.
+  - `DATABASE_CLIENT`: Database client.
+  - `DATABASE_FILENAME`: Database filename.
+  - `JWT_SECRET`: Secret for JWT token.
+  - `STRIPE_KEY`: Stripe API key for payments.
+  - `CLIENT_URL`: URL of the frontend server.
+6. Run the backend using `npm run develop` command in the `backend` directory.
 
-### `npm test`
+## Usage
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Open the web browser and navigate to the URL of the frontend server. Browse products, add them to cart, and proceed to checkout. The Stripe payment gateway will be used to process the payment.
 
-### `npm run build`
+## Contributing
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Contributions are welcome. Please open an issue or submit a pull request.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
