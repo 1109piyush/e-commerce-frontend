@@ -23,7 +23,9 @@ const Newsletter = () => {
                 </span>
                 <span className="social-icons">
                     <div className="icon">
-                        <FaLinkedinIn size={14} />
+                    <a href="https://www.linkedin.com/in/piyush-singhal-3ab65b17a/" target="_blank" rel="noopener noreferrer">
+
+                        <FaLinkedinIn size={14} /></a>
                     </div>
                     <div className="icon">
                         <FaFacebookF size={14} />
